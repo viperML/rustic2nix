@@ -1,0 +1,15 @@
+{
+  "nix.serverPath": "nixd",
+  "nix.serverSettings": {
+    "nixd": {
+      "nixpkgs": {
+        "expr": "import <nixpkgs> { }"
+      },
+      "options": {
+        "nixos": {
+          "expr": "(import default.nix).options"
+        }
+      }
+    }
+  }
+}
